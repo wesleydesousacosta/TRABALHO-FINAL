@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/card1.css">
+    <title>Aula 1</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/skulpt/1.0.0/skulpt.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/skulpt/1.0.0/skulpt-stdlib.js"></script>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="Logo">
+            <img src="src/images/globo.gif" alt="Avatar">
+        </div>
+        <h1>Por que é importante conhecer os comandos Python?</h1>
+        <p>Conhecer os comandos Python é crucial para desenvolvedores que buscam eficiência e versatilidade em suas carreiras. Dominar esses comandos permite a implementação rápida e eficaz de soluções em áreas como desenvolvimento web, ciência de dados e inteligência artificial.</p>
+
+        <p>Outrossim, a habilidade com Python facilita a automação de tarefas repetitivas, economizando tempo e aumentando a produtividade.</p>
+
+        <p>Adicionalmente, a compreensão profunda desses comandos abre portas para projetos mais complexos e inovadores, tornando o desenvolvedor mais competitivo no mercado.</p>
+
+        <p>Portanto, investir tempo para aprender e praticar os comandos Python é essencial para quem deseja não apenas seguir, mas liderar no campo da tecnologia.</p>
+
+        <h2>Benefícios de dominar os comandos essenciais:</h2>
+        <p>Dominar os comandos fundamentais do Python traz inúmeros benefícios que ampliam as capacidades de qualquer desenvolvedor. Aqui estão alguns deles:</p>
+        
+        <ul>
+            <li><strong>Compreensão aprofundada:</strong> Primeiramente, ao dominar esses comandos, você ganha uma compreensão mais profunda da linguagem, o que capacita a escrever códigos mais limpos, eficientes e legíveis.</li>
+            <li><strong>Melhoria na resolução de problemas:</strong> Além disso, conhecer bem os comandos facilita a identificação e resolução de problemas, permitindo desenvolver soluções mais elegantes e eficazes.</li>
+            <li><strong>Otimização do tempo:</strong> Adicionalmente, a fluência nos comandos permite automatizar e otimizar tarefas, economizando tempo valioso.</li>
+            <li><strong>Inovação e criatividade:</strong> Com o domínio, é possível inovar e criar projetos mais complexos e criativos, expandindo as fronteiras do que é possível realizar.</li>
+            <li><strong>Competitividade no mercado:</strong> Ademais, essa habilidade aprimora seu perfil profissional, tornando-o mais competitivo no mercado de trabalho.</li>
+            <li><strong>Colaboração efetiva:</strong> Finalmente, entender os comandos essenciais facilita a colaboração em projetos grandes, onde a clareza e a eficiência são essenciais.</li>
+        </ul>
+
+        <p>Em suma, esses benefícios destacam por que é tão vantajoso investir no aprendizado e, na prática dos comandos Python.</p>
+
+        <h2>Impacto na produtividade e eficiência do desenvolvedor:</h2>
+        <p>Dominar os comandos Python essenciais eleva significativamente a produtividade e eficiência do desenvolvedor. A fluência nesses comandos permite que desenvolvedores escrevam códigos de forma mais rápida e com menos erros, otimizando consideravelmente o tempo e recursos gastos no desenvolvimento.</p>
+
+        <p>Além do mais, essa competência facilita o uso eficaz de bibliotecas e frameworks, acelerando o desenvolvimento de projetos e aplicações. Em síntese, essa habilidade também melhora a capacidade de resolver problemas complexos e de implementar soluções inovadoras, resultando em um ciclo de desenvolvimento mais ágil e produtivo.</p>
+
+        <h2>Lista de comandos Python essenciais:</h2>
+        <pre>
+print("Olá, bem vindo ao Dojô da ByLearn")
+print("Você também", "pode enviar várias",)</pre>
+<pre>
+nome = input("Qual seu nome? ") 
+print("Seu nome é:", nome)</pre>
+<pre>
+horario = "tarde"
+
+if horario == "manhã":
+    print("Bom dia!")
+elif horario == "tarde":  # Nesse exemplo, é aqui que a condição será verdade
+    print("Boa tarde!")  # Então essa é a mensagem que vai aparecer
+else:
+    print("Boa noite!")</pre>
+<pre>
+for numero in range(10):  # Range é responsável para definir um intervalo
+    dobro = numero * 2
+    print("O dobro de", numero, "é", dobro)
+        </pre>
+
+        <div id="prompt" contenteditable="true"></div>
+            <div>
+                <h1>Execução de Código Python</h1>
+                <p>Digite seu código Python abaixo e clique em "Executar" para ver o resultado:</p>
+                
+                <!-- Campo para o código Python -->
+                <textarea id="pythonCode" rows="10" style="width:100%;"></textarea>
+                <br>
+                
+                <!-- Botão de execução -->
+                <button onclick="executePython()">Executar Código</button>
+                
+                <!-- Área de resultado -->
+                <h2>Resultado:</h2>
+                <pre id="output"></pre>
+            </div>
+
+        <script>
+                // Função para executar o código Python
+                function executePython() {
+                    var prog = document.getElementById("pythonCode").value;
+                    var mypre = document.getElementById("output");
+                    mypre.innerHTML = '';
+                    Sk.configure({ output: outf, read: builtinRead });
+                    Sk.importMainWithBody("<stdin>", false, prog, true);
+                }
+
+                // Função que imprime o resultado no pre
+                function outf(text) { 
+                    var mypre = document.getElementById("output"); 
+                    mypre.innerHTML += text; // Usando += para concatenar o texto
+                }
+
+                // Função para leitura de arquivos padrão (não utilizada aqui)
+                function builtinRead(x) {
+                    if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined) {
+                        throw "File not found: '" + x + "'";
+                    }
+                    return Sk.builtinFiles["files"][x];
+                }
+        </script>
+        </div>
+    
+        
+    </div>
+
+    
+    
+</body>
+</html>

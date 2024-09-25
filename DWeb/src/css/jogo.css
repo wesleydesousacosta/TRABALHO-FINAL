@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to left top, #4f46e5, #202020);
+    margin: 0;
+    padding: 20px;
+}
+
+#game-container {
+    background: linear-gradient(to left top, #4f46e5, #202020);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#code-snippet {
+    font-family: monospace;
+    background-color: #eaeaea;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-wrap: break-word;
+}
+
+#prompt {
+    border: 1px solid #ccc;
+    padding: 10px;
+    min-height: 50px;
+    margin-bottom: 20px;
+    font-family: monospace;
+    background-color: #1e1e1e; /* Cor de fundo como um terminal */
+    color: #ffffff; /* Texto branco */
+    border-radius: 5px; /* Borda arredondada */
+}
+
+#prompt:focus {
+    outline: none; /* Remove o contorno padrão do foco */
+    border-color: #007bff; /* Cor da borda ao focar */
+}
+
+button {
+    padding: 10px 15px;
+    margin-right: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+h1, h2, h3 { /* Adicionando a regra para mudar a cor dos cabeçalhos */
+    color: white; /* Cor branca */
+    margin: 10px 0; /* Mantém a margem existente */
+}
+
+#score-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+
+#player-registration {
+    margin-bottom: 20px;
+}
+
+#player-name {
+    padding: 10px;
+    width: 200px;
+}
+
+#register-btn {
+    padding: 10px;
+    margin-left: 5px;
+}
+
+#ranking-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#ranking-list li {
+    margin: 5px 0;
+}

@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    .poppins-thin {
+        font-family: "Poppins", sans-serif;
+        font-weight: 100;
+        font-style: normal;
+      }
+}
+
+body{
+    display: flex;
+    min-height: 100vh;
+    background: linear-gradient( to left top, #4f46e5, #202020  );
+}
+/*
+main{
+    padding: 20px;
+}*/
+
+/*edita a borda siderbar*/
+#sidebar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #ffffff;
+    box-shadow: 4px 0 0 #4f46e5;
+    height: 100vh;
+    border-radius: 0px 18px 18px 0px;
+    position: fixed; /* Altere de relative para fixed */
+    top: 0; /* Certifique-se de que a barra lateral comece no topo da janela */
+    left: 0; /* Mantenha-a fixa no lado esquerdo */
+    transition: all .5s;
+    min-height: 82px;
+    width: 60px;
+    z-index: 1000;
+}
+
+#sidebar_content{
+    padding: 8px;
+}
+/*user edit*/
+#user{
+    display: flex;
+    align-items: 50px;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+#user_avatar{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+#user_infos{
+    display: flex;
+    flex-direction: column;
+}
+
+#user_infos span:last-child{
+    color: #6b6b6b;
+    font-size: 12px;
+}
+/*user edit*/
+
+#side_items{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    list-style: none;
+}
+
+.side_item{
+    border-radius: 8px;
+    padding: 14px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.side_item:hover:not(:active),
+#logout_btn:hover{
+    background-color: #4f46e5;
+}
+
+/**/
+/*mexe com a cor do primeiro da letra*/
+.side_item span{
+    overflow: hidden;
+}
+
+.side_item a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0a0a0a;
+    overflow: hidden;
+}
+
+/*
+.side_item.active a{
+    color: #e3e9f7;
+}
+
+
+.side_item.active a i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+}*/
+
+/*mexe com a logout*/
+
+#logout{
+    border-top: 1px solid #e3e9f7;
+    padding: 12px;
+}
+
+#logout_btn{
+    border: none;
+    padding: 12px;
+    font-size: 14px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    border-radius: 8px;
+    text-align: start;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+/*open_btn*/
+#open_btn{
+    position: absolute;
+    top: 30px;
+    right: -10px;
+    background-color: #4f46e5;
+    color: #e3e9f7;
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+#open_btn_icon{
+    transition:  .3s ease;
+}
+
+.open-sidebar #open_btn_icon{
+    transform: rotate(180deg);
+}
+/*open_btn*/
+/*borda*/
+.item-description{
+    width: 0px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    transition: width .6s;
+}
+
+#sidebar.open-sidebar{
+    min-width: 15%;
+}
+
+#sidebar.open-sidebar .item-description{
+    width: 100px;
+    height: auto;
+}
+
+#sidebar.open-sidebar .side_item a{
+    justify-content: flex-start;
+    gap: 14px;
+}
+
+
+/*Configuração*/
+#config_section {
+    margin-left: 250px; 
+    padding: 20px;
+    flex: 1; 
+    background: linear-gradient( to left top, #4f46e5, #202020  ); 
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+h1 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 20px; 
+    color: #4f46e5; 
+}
+
+.config_option {
+    margin-bottom: 15px; 
+    display: flex;
+    flex-direction: column; 
+}
+
+.config_option label {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    margin-bottom: 5px; 
+    color: white; 
+}
+
+.config_option input {
+    padding: 10px;
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    font-family: "Poppins", sans-serif;
+    font-size: 16px; 
+    transition: border-color 0.3s; 
+}
+
+.config_option input:focus {
+    border-color: #4f46e5; 
+    outline: none; 
+}
+
+.config_option input[type="checkbox"] {
+    width: auto; 
+    margin-right: 10px;
+}
+
+.config_option span {
+    color: white; 
+    font-family: "Poppins", sans-serif; 
+    margin-left: 5px; 
+}
+
+#save_config {
+    background-color: #4f46e5; 
+    color: white; 
+    padding: 10px 15px; 
+    border: none; 
+    border-radius: 5px; 
+    font-family: "Poppins", sans-serif;
+    font-size: 16px; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+}
+
+#save_config:hover {
+    background-color: #3d37b0; 
+}
+
+
+@media only screen and (max-width: 880px) {
+    #sidebar {
+        width: 50px; 
+        border-radius: 0px; 
+    }
+
+    #sidebar.open-sidebar {
+        width: 180px; 
+    }
+
+    /* Esconder descrições e deixar apenas ícones visíveis */
+    #sidebar .item-description {
+        display: none; 
+    }
+
+    #sidebar.open-sidebar .item-description {
+        display: inline-block; 
+        width: auto; 
+    }
+
+    #config_section {
+        margin-left: 60px; 
+        padding: 10px; 
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .config_option {
+        margin-bottom: 10px; 
+    }
+
+    .config_option label, .config_option span {
+        font-size: 14px;
+    }
+
+    #save_config {
+        font-size: 14px;
+        padding: 8px 12px; 
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    body {
+        flex-direction: column;
+    }
+
+    #sidebar {
+        position: relative; 
+        height: auto; 
+        width: 100%; 
+        flex-direction: row; 
+        justify-content: space-around; 
+    }
+
+    #sidebar.open-sidebar {
+        width: 100%; 
+    }
+
+    #sidebar .side_item a {
+        justify-content: center; 
+    }
+
+    #config_section {
+        margin-left: 0; 
+        width: 100%; 
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    .config_option {
+        margin-bottom: 8px;
+    }
+
+    .config_option label, .config_option span {
+        font-size: 12px;
+    }
+
+    #save_config {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+}

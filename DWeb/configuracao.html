@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="src/css/configs.css">
+    <title>Orbita</title>
+</head>
+<body>
+    
+    <nav id="sidebar">
+        <div id="sidebar_content">
+            <div id="user">
+                <img src="src/images/globo.gif" id="user_avatar" alt="Avatar">
+
+                <p id="user_infos">
+                    <span class="item-description">
+                        Fulano
+                    </span>
+                    <span class="item-description">
+                        Fulanoooo
+                    </span>
+                </p>
+            </div> 
+
+            <ul id="side_items">
+                <li class="side_item">
+                    <a href="menu.html">
+                        <i class="fa-solid fa-house-chimney-window"></i>
+                        <span class="item_description">Menu</span>
+                    </a>
+                </li>
+
+                <li class="side_item">
+                    <a href="aprendizado.html">
+                        <i class="fa-solid fa-chart-line"></i>
+                        <span class="item_description">Aprendizado</span>
+                    </a>
+                </li>
+
+                <li class="side_item">
+                    <a href="acessoRapido.html">
+                        <i class="fa-solid fa-bolt-lightning"></i>
+                        <span class="item_description">Acesso Rápido</span>
+                    </a>
+                </li>
+
+                <li class="side_item">
+                    <a href="ConteudoRecente.html">
+                        <i class="fa-sharp fa-solid fa-bell-concierge"></i>
+                        <span class="item_description">Conteúdo Recente</span>
+                    </a>
+                </li>
+
+                <li class="side_item">
+                    <a href="Configuracao.html">
+                        <i class="fa-solid fa-gear"></i>
+                        <span class="item_description">Configuração</span>
+                    </a>
+                </li>
+                
+            </ul>
+
+            <button id="open_btn">
+                <i id="open_btn_icon" class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
+
+        <div id="logout">
+            <button id="logout_btn">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span class="item-description">
+                    Sair
+                </span>
+            </button>
+        </div>
+
+    </nav>
+
+    <main id="config_section">
+        <h1>Configurações</h1>
+        <div class="config_option">
+            <label for="username">Nome de Usuário:</label>
+            <input type="text" id="username" placeholder="Digite seu nome de usuário">
+        </div>
+        <div class="config_option">
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Digite seu email">
+        </div>
+        <div class="config_option">
+            <label for="password">Senha:</label>
+            <input type="password" id="password" placeholder="Digite sua senha">
+        </div>
+        <div class="config_option">
+            <label for="notifications">Notificações:</label>
+            <input type="checkbox" id="notifications" checked>
+            <span>Ativar Notificações</span>
+        </div>
+        <button id="save_config">Salvar Configurações</button>
+    </main>
+
+    <script src="src/java/javascrip.js"></script>
+</body>
+</html>

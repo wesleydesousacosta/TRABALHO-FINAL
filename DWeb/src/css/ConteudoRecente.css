@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    .poppins-thin {
+        font-family: "Poppins", sans-serif;
+        font-weight: 100;
+        font-style: normal;
+      }
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0 35px;
+    background: linear-gradient( to left top, #4f46e5, #202020  );
+}
+/*Input*/
+#searchInput {
+    width: 100%; 
+    max-width: 400px; 
+    padding: 0.5rem; 
+    border: 2px solid #4f46e5; 
+    border-radius: 5px; 
+    font-size: 1rem; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    transition: border-color 0.3s; 
+}
+
+#searchInput:focus {
+    outline: none; 
+    border-color: #4a90e2; 
+    box-shadow: 0 0 5px rgba(74, 144, 228, 0.5); 
+}
+
+#searchInput::placeholder {
+    color: #aaa; 
+    font-style: italic; 
+}
+
+
+/*edita a borda siderbar*/
+#sidebar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #ffffff;
+    box-shadow: 4px 0 0 #4f46e5;
+    height: 100vh;
+    border-radius: 0px 18px 18px 0px;
+    position: fixed; /* Altere de relative para fixed */
+    top: 0; /* Certifique-se de que a barra lateral comece no topo da janela */
+    left: 0; /* Mantenha-a fixa no lado esquerdo */
+    transition: all .5s;
+    min-height: 82px;
+    width: 60px;
+    z-index: 1000;
+}
+
+#sidebar_content{
+    padding: 8px;
+}
+/*user edit*/
+#user{
+    display: flex;
+    align-items: 50px;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+#user_avatar{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+#user_infos{
+    display: flex;
+    flex-direction: column;
+}
+
+#user_infos span:last-child{
+    color: #6b6b6b;
+    font-size: 12px;
+}
+/*user edit*/
+
+#side_items{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    list-style: none;
+}
+
+.side_item{
+    border-radius: 8px;
+    padding: 14px;
+    cursor: pointer;
+}
+
+/*mexe com a cor do primeiro*/
+/*
+.side_item.active{
+    background-color: #4f46e5;
+}
+*/
+
+.side_item:hover:not(:active),
+#logout_btn:hover{
+    background-color: #4f46e5;
+}
+
+/**/
+/*mexe com a cor do primeiro da letra*/
+.side_item span{
+    overflow: hidden;
+}
+
+.side_item a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0a0a0a;
+    overflow: hidden;
+}
+
+/*
+.side_item.active a{
+    color: #e3e9f7;
+}
+
+
+.side_item.active a i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+}*/
+
+/*mexe com a logout*/
+
+#logout{
+    border-top: 1px solid #e3e9f7;
+    padding: 12px;
+}
+
+#logout_btn{
+    border: none;
+    padding: 12px;
+    font-size: 14px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    border-radius: 8px;
+    text-align: start;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+/*open_btn*/
+#open_btn{
+    position: absolute;
+    top: 30px;
+    right: -10px;
+    background-color: #4f46e5;
+    color: #e3e9f7;
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+#open_btn_icon{
+    transition:  .3s ease;
+}
+
+.open-sidebar #open_btn_icon{
+    transform: rotate(180deg);
+}
+/*open_btn*/
+/*borda*/
+.item-description{
+    width: 0px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    transition: width .6s;
+}
+
+#sidebar.open-sidebar{
+    min-width: 15%;
+}
+
+#sidebar.open-sidebar .item-description{
+    width: 100px;
+    height: auto;
+}
+
+#sidebar.open-sidebar .side_item a{
+    justify-content: flex-start;
+    gap: 14px;
+}
+
+/*scroll edit*/
+
+/* Estilizando o .img dentro da .card */
+
+.Scroll1{
+    padding: 20px;
+    max-width: 1100px;
+    width: 100%;
+    position: relative;
+}
+/*edita potao de movimento de scroll*/
+.Scroll1 i{
+    height: 50px;
+    width: 50px;
+    background: #fff;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    font-size: 1.25rem;
+    transform: translateY(-50%);
+    box-shadow: 0 3px 6px rgb(0, 0, 0, 0.23);
+}
+
+.Scroll1 i:first-child{
+    left: -22px;
+
+}
+
+.Scroll1 i:last-child{
+    right: -22px;
+
+}
+
+h2 {
+    color: white; 
+    margin: 50px 0; 
+    margin-left: 50px;
+    text-align: left;
+    
+}
+
+
+/**/
+.Scroll1 .Horizontal1{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 4) - 12px);
+    gap: 100px;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+.Horizontal1 :where(.card, .img){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.Horizontal1.dragging .card{
+    cursor: grab;
+    user-select: none;
+}
+
+.Horizontal1 .card{
+    height: 342px;
+    list-style: none;
+    background: linear-gradient( to left top, #4f46e5, #202020  );
+    border-radius: 100px;
+    display: flex;
+    cursor: pointer;
+    padding: 15px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Estilizando a imagem dentro de .img */
+.card .img{
+    background: #4f46e5;
+    max-width: 200px; 
+    height: auto;
+    border-radius: 50%; 
+}
+
+.card .img img {
+    max-width: 200px; 
+    height: auto; 
+    object-fit: cover;
+    border-radius: 50%; 
+    border: 4px solid #fff;
+}
+
+.card h1{
+    font-weight: 500;
+    font-size: 1.56rem;
+    margin: 30px 0 5px;
+    color: #fff; 
+    text-align: center; 
+}
+
+@media screen and (max-width: 600px) {
+    #sidebar {
+        width: 50px;
+    }
+    
+    #sidebar.open-sidebar {
+        width: 100px;
+    }
+
+    #open_btn {
+        top: 10px;
+        right: -15px;
+    }
+
+    #sidebar.open-sidebar .item-description {
+        width: 60px;
+    }
+}

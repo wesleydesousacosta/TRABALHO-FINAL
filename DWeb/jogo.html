@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Compilação</title>
+    <link rel="stylesheet" href="src/css/jogo.css">
+</head>
+<body>
+    <div id="game-container">
+        <h1>Jogo de Compilação Python</h1>
+
+        <!-- Cadastro de Jogador -->
+        <div id="player-registration">
+            <input type="text" id="player-name" placeholder="Digite seu nome" />
+            <button id="register-btn">Cadastrar Jogador</button>
+            <p id="registration-message"></p>
+        </div>
+
+        <p id="code-snippet"># Exemplo de código Python com erro:<br>print("Olá, Mundo"</p>
+        
+        <!-- Campo de entrada que se parece com um terminal -->
+        <div id="prompt" contenteditable="true" placeholder="Digite a correção aqui"></div>
+        
+        <button id="submit-btn">Submeter Correção</button>
+        <button id="next-round-btn" style="display:none;">Próxima Rodada</button>
+        
+        <div id="scoreboard">
+            <h2>Pontuação: <span id="score">0</span></h2>
+            <h2>Rodadas: <span id="rounds">1</span>/10</h2>
+        </div>
+        
+        <h3>Histórico de Pontuações:</h3>
+        <ul id="score-list"></ul>
+
+        <!-- Ranking dos Jogadores -->
+        <h3>Ranking:</h3>
+        <ul id="ranking-list"></ul>
+    </div>
+
+    <script src="src/java/jogo.js"></script>
+</body>
+</html>

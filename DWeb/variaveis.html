@@ -1,0 +1,127 @@
+<!DOCTYPE html> 
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/variaveis.css">
+    <title>Variáveis em Python</title>
+</head>
+
+<body>
+    <header>
+        <h1>Variáveis em Python</h1>
+    </header>
+    <main>
+        <section id="variaveis">
+            <h2>1. O que são Variáveis?</h2>
+            <p>Uma variável é um espaço na memória que armazena dados que podem ser alterados durante a execução do programa.</p>
+        </section>
+
+        <section id="tipos">
+            <h2>2. Tipos de Variáveis</h2>
+            <ul>
+                <li><strong>Inteiros</strong> (<code>int</code>): Números sem ponto decimal, como <code>5</code>, <code>10</code>, <code>-3</code>.</li>
+                <li><strong>Números de Ponto Flutuante</strong> (<code>float</code>): Números com ponto decimal, como <code>3.14</code>, <code>-0.001</code>.</li>
+                <li><strong>Strings</strong> (<code>str</code>): Sequências de caracteres, como <code>"Hello, World!"</code>.</li>
+                <li><strong>Booleanos</strong> (<code>bool</code>): Valores que representam verdadeiro ou falso, <code>True</code> ou <code>False</code>.</li>
+                <li><strong>Listas</strong>: Coleções ordenadas e mutáveis de itens, como <code>[1, 2, 3]</code> ou <code>['a', 'b', 'c']</code>.</li>
+                <li><strong>Tuplas</strong>: Coleções ordenadas e imutáveis, como <code>(1, 2, 3)</code>.</li>
+                <li><strong>Dicionários</strong>: Coleções de pares chave-valor, como <code>{'nome': 'Alice', 'idade': 25}</code>.</li>
+            </ul>
+        </section>
+
+        <section id="declaracao">
+            <h2>3. Declaração de Variáveis</h2>
+            <pre><code>nome = "Alice"
+idade = 25
+altura = 1.68
+estudante = True</code></pre>
+        </section>
+
+        <section id="nomenclatura">
+            <h2>4. Nomenclatura de Variáveis</h2>
+            <h3>Regras:</h3>
+            <ul>
+                <li>Uma variável deve começar com uma letra (a-z, A-Z) ou um sublinhado (_).</li>
+                <li>O restante do nome pode conter letras, números (0-9) e sublinhados.</li>
+                <li>Não pode ser uma palavra reservada (como <code>if</code>, <code>else</code>, <code>while</code>, etc.).</li>
+            </ul>
+            <h3>Boas Práticas:</h3>
+            <ul>
+                <li>Use nomes descritivos para facilitar a compreensão do código.</li>
+                <li>Use letras minúsculas e sublinhados para separar palavras (ex.: <code>idade_do_aluno</code>).</li>
+            </ul>
+        </section>
+
+        <section id="tipagem">
+            <h2>5. Tipagem Dinâmica</h2>
+            <p>Python é uma linguagem de tipagem dinâmica, o que significa que você não precisa declarar o tipo da variável. O tipo é inferido a partir do valor atribuído:</p>
+            <pre><code>x = 10       # x é um inteiro
+x = "Texto"  # Agora x é uma string</code></pre>
+        </section>
+
+        <section id="operacoes">
+            <h2>6. Operações com Variáveis</h2>
+            <p>Você pode realizar várias operações com variáveis, como:</p>
+            <h3>Aritméticas:</h3>
+            <pre><code>a = 10
+b = 3
+soma = a + b          # 13
+diferenca = a - b     # 7
+produto = a * b       # 30
+divisao = a / b       # 3.333...
+divisao_inteira = a // b  # 3
+resto = a % b         # 1
+exponenciacao = a ** b  # 1000</code></pre>
+            <h3>Concatenação de Strings:</h3>
+            <pre><code>saudacao = "Olá, " + nome  # "Olá, Alice"</code></pre>
+        </section>
+
+        <section id="escopo">
+            <h2>7. Escopo de Variáveis</h2>
+            <h3>Variáveis Locais:</h3>
+            <pre><code>def minha_funcao():
+    x = 10  # x é local
+    print(x)</code></pre>
+            <h3>Variáveis Globais:</h3>
+            <pre><code>x = 20  # x é global
+
+def outra_funcao():
+    print(x)  # Acessa a variável global</code></pre>
+        </section>
+
+        <section id="mutaveis">
+            <h2>8. Variáveis Mutáveis e Imutáveis</h2>
+            <h3>Mutáveis:</h3>
+            <pre><code>lista = [1, 2, 3]
+lista.append(4)  # Agora a lista é [1, 2, 3, 4]</code></pre>
+            <h3>Imutáveis:</h3>
+            <pre><code>nome = "Alice"
+nome[0] = "a"  # Isso causaria um erro, pois strings são imutáveis</code></pre>
+        </section>
+
+        <section id="atribuicao">
+            <h2>9. Atribuição Múltipla</h2>
+            <pre><code>a, b, c = 1, 2, 3</code></pre>
+        </section>
+
+        <section id="entrada">
+            <h2>10. Variáveis e Entrada do Usuário</h2>
+            <pre><code>nome = input("Qual é o seu nome? ")
+idade = int(input("Qual é a sua idade? "))  # Converte a entrada para inteiro</code></pre>
+        </section>
+    </main>
+
+    <h1>Conteúdo sobre Variáveis</h1>
+
+    <input type="text" id="searchInput" placeholder="Pesquise aqui..." onkeyup="search()">
+    <footer>
+        <p>Conteúdo sobre variáveis em Python.</p>
+    </footer>
+
+    <script src="/src/java/search.js"></script>
+    
+</body>
+
+</html>
